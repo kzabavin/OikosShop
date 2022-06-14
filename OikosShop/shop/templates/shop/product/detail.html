@@ -1,0 +1,44 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+    {% if category %}{{ category.title }}{% else %}Oikos - Товары{% endif %}
+{% endblock %}
+{% block content %}
+    <div class="product-detail">
+        <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+        <h1>{{ product.name }}</h1>
+        <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+        <p class="price">{{ product.price }} руб.</p>
+        {{ product.description|linebreaks }}
+        
+        <div class="usedin-list">
+            <h2>Используется в:</h2>
+        {% for usedin_product in usedin %}
+            <div class="usedin-item">
+                        
+                    <a href="{{ usedin_product.get_absolute_url }}" class="item_name">{{ usedin_product.name }}</a>
+                    {% comment %} <a href="{{ usedin_product.get_absolute_url }}">
+                        <img src="{% if usedin_product.image %}{{ usedin_product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" class="item_img">
+                    </a>  {% endcomment %}
+                    <span class="item_price">{{ usedin_product.price }} руб.</span>
+
+            </div>
+        {% endfor %}
+        </div>
+
+        <div class="uses-list">
+            <h2>Использует:</h2>
+        {% for uses_product in uses %}
+            <div class="uses-item">
+                        
+                    <a href="{{ uses_product.get_absolute_url }}" class="item_name">{{ uses_product.name }}</a>
+                    {% comment %} <a href="{{ uses_product.get_absolute_url }}">
+                        <img src="{% if uses_product.image %}{{ uses_product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" class="item_img">
+                    </a>  {% endcomment %}
+                    <span class="item_price">{{ uses_product.price }} руб.</span>
+
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}
