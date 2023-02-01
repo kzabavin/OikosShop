@@ -1,0 +1,86 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}Oikos - Условия доставки и оплаты{% endblock %}
+{% block content %}
+
+<section class="cs-page__row">
+    <div class="cs-title">
+        <span class="cs-title__page-content">Условия доставки и оплаты</span>
+    </div>
+
+    <div class="cs-delivery-info">
+        <div class="cs-delivery-info__text cs-online-edit">
+            <a class="cs-online-edit__link" data-edit-role="deliveryInfo" title="Настроить способы доставки" style="display:none"></a>
+            <a class="cs-online-edit__horizontal-borders" data-edit-role="deliveryInfo" style="display:none"></a>
+            <a class="cs-online-edit__vertical-borders" data-edit-role="deliveryInfo" style="display:none"></a>
+            <h4 class="cs-delivery-info__title"><span>Способы доставки</span></h4>
+            <ul class="cs-delivery-info__list">
+                <li class="cs-delivery-info__item">
+                    <span class="cs-delivery-info__caption">Возможность передачи товара маршрутным такси в регионы</span>
+                    <span class="cs-delivery-info__comment h-pre-wrap">Подробности уточняются после оформления заказа.</span>
+                </li>
+                <li class="cs-delivery-info__item">
+                    <span class="cs-delivery-info__caption">Бесплатная доставка </span>
+                    <span class="cs-delivery-info__free">Бесплатно</span>
+                    <span class="cs-delivery-info__comment h-pre-wrap">При покупке на сумму от 300р по Минску и 10 км от МКАД</span>
+                </li>
+                <li class="cs-delivery-info__item"><span class="cs-delivery-info__caption">Самовывоз</span>
+                    <span class="cs-delivery-info__free">Бесплатно</span>
+                    <span class="cs-delivery-info__comment h-pre-wrap">Со вторника по пятницу, с 9.30 до 17:30. С субботы по воскресенье, с 9:30 до 16:30. Перед приездом, пожалуйста, уточните наличие  по телефону.</span>
+                </li>
+                <li class="cs-delivery-info__item"><span class="cs-delivery-info__caption">Доставка почтой Европочта</span>
+                    <span class="cs-delivery-info__comment h-pre-wrap">Доставка в отделение Европочты. На сумму от 300рублей - бесплатно.  </span>
+                </li>
+                <li class="cs-delivery-info__item">
+                    <span class="cs-delivery-info__caption">Доставка курьером</span>
+                    <span class="cs-delivery-info__free">Бесплатно при условии</span>
+                    <span class="cs-delivery-info__price h-pre-wrap">Стоимость доставки 5.00 руб. Заказ на сумму свыше 300 руб доставляется <b>бесплатно</b>.</span>
+                    <span class="cs-delivery-info__comment h-pre-wrap">Доставка материалов на объект в г.Минск и в пределах 10км от МКАД, бесплатно на сумму покупки от 300р.   </span>
+                </li>
+            </ul>
+        </div>
+        <div class="cs-delivery-info__text cs-online-edit">
+            <a class="cs-online-edit__link" data-edit-role="paymentInfo" title="Настроить способы оплаты" style="display:none"></a>
+            <a class="cs-online-edit__horizontal-borders" data-edit-role="paymentInfo" style="display:none"></a>
+            <a class="cs-online-edit__vertical-borders" data-edit-role="paymentInfo" style="display:none"></a>
+            <h4 class="cs-delivery-info__title"><span>Способы оплаты</span></h4>
+            <ul class="cs-delivery-info__list">
+                <li class="cs-delivery-info__item">
+                    <span class="cs-delivery-info__caption">Терминал</span>
+                    <span class="cs-delivery-info__comment h-pre-wrap">Подробности по оплате уточняются при оформлении заказа.</span>
+                </li>
+                <li class="cs-delivery-info__item">
+                    <span class="cs-delivery-info__caption">Безналичный расчет</span>
+                    <span class="cs-delivery-info__comment h-pre-wrap">Реквизиты для оплаты будут предоставлены после оформления заказа.</span>
+                </li>
+                <li class="cs-delivery-info__item">
+                    <span class="cs-delivery-info__caption">Наличными</span>
+                    <span class="cs-delivery-info__comment h-pre-wrap">Оплата наличными обсуждается во время заказа.</span>
+                </li>
+            </ul>
+        </div>
+        <div class="cs-delivery-info__text cs-online-edit">
+            <a class="cs-online-edit__link" data-edit-role="deliveryRegions" title="Настроить регионы доставки" style="display:none"></a>
+            <a class="cs-online-edit__horizontal-borders" data-edit-role="deliveryRegions" style="display:none"></a>
+            <a class="cs-online-edit__vertical-borders" data-edit-role="deliveryRegions" style="display:none"></a>
+            <h4 class="cs-delivery-info__title"><span>Регионы доставки:</span></h4>
+            <div class="b-user-content">
+                <ul>
+                    <li>                            
+                        <span class="b-delivery-info__region">Беларусь:</span>
+                        <div class="b-user-content">                
+                            <ul>                    
+                                <li>Минск</li>                                                  
+                            </ul>
+                            <ul>
+                                <li>Минская область</li>
+                            </ul>        
+                        </div>                   
+                    </li>                
+                </ul>        
+            </div>
+        </div>
+    </div>
+</section>
+    
+{% endblock %}

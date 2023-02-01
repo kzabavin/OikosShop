@@ -28,3 +28,11 @@ def product_detail(request, id, slug):
                   {'product': product,
                    'usedin': usedin,
                    'uses': uses})
+    
+    
+def about(request):
+    return render(request, 'about.html')
+
+
+def delivery(request):
+    return render(request, 'delivery.html')

@@ -1,0 +1,101 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}Oikos - О нас{% endblock %}
+{% block content %}
+
+<section class="cs-page__row">
+    <div class="cs-title">
+        <span class="cs-title__page-content">О нас</span>
+    </div>
+
+    <div class="cs-online-edit">
+        <div class="b-user-content">
+            Магазин OIKOS в Минске
+            Магазин OIKOS предлагает высококачественные интерьерные краски. В наличии декоративные штукатурки Ойкос Италия.
+            Мы представляем краски и декоративные штукатурки итальянской фабрики OIKOS.
+            В нашем каталоге Вы найдете декоративные покрытия, позволяющие превратить любую поверхность в произведение искусства.
+            Наша компания подбирает решение для вашего проекта учитывая все Ваши пожелания.
+            Мы предлагаем подбор материалов и профессиональную консультацию по нанесению.
+            Мы обеспечим сервис на высоком уровне и индивидуальный подход.
+            У нас вы найдете интерьерные краски любых цветов. Матовую, глянцевую или с шелковистым блеском. 
+            Они обеспечивают однородное покрытие и устойчивы к выцветанию, царапинам, мытью. 
+            Обратившись к нам, вы может воспользоваться уникальным сервисом. 
+            Мы проконсультируем на профессиональном уровне, выявим особенности помещения и рассчитаем стоимость материала и его нанесения. 
+            Обратившись к нам Вы получите всю исчерпывающую информацию и помощь в выборе.
+            Купить продукцию Ойкос Oikos в Минске
+            Клиентам мы предлагаем:
+            Индивидуальный подход;
+            Современные решения;
+            Большой выбор;
+            Выгодные цены;
+            Скидки и акции;
+            Профессионализм;
+            Оперативность.
+        </div>    
+        {% comment %} <div class="b-about-us">
+            <h2 class="b-about-us__title">Информация о компании</h2>
+            <div class="b-about-us__row">
+                <b class="b-about-us__caption">Название:</b>
+                <div class="b-about-us__text">Салон-Магазин OIKOS</div>
+            </div>
+            <div class="b-about-us__row">
+                <b class="b-about-us__caption">Тип компании:</b>
+                <div class="b-about-us__text">Торговая компания</div>
+            </div>
+            <div class="b-about-us__row">
+                <b class="b-about-us__caption">Бренды:</b>
+                <div class="b-about-us__text">Oikos</div>
+            </div>
+        </div>
+        <div class="b-about-us">
+            <h2 class="b-about-us__title">Организационно-правовая форма и капитал</h2>
+            <div class="b-about-us__row">
+                <b class="b-about-us__caption">Год основания:</b>
+                <div class="b-about-us__text">2001</div>
+            </div>
+            <div class="b-about-us__row">
+                <b class="b-about-us__caption">Организационно-правовая форма:</b>
+                <div class="b-about-us__text">Частное предприятие</div>
+            </div>
+        </div> {% endcomment %}
+    </div>
+</section>
+
+<section class="cs-page__row">
+    <div>
+        <div class="cs-title">
+            <span class="cs-title__page-content">Контакты</span>
+        </div>
+        <div class="cs-contact-info cs-online-edit">
+            <span class="cs-contact-info__row" title="Название">Салон-Магазин OIKOS</span>
+            <span class="cs-contact-info__row" title="Контактное лицо">Евгений</span>
+            {% comment %} <a class="cs-contact-info__row" href="#" target="_blank" title="Сайт компании">mysite.by/</a> {% endcomment %}
+            <address class="cs-contact-info__row" title="Адрес">
+                <span class="cs-contact-info__comma" title="ул.Уручская, 19, павильон П-8, Минск, Беларусь">ул.Уручская, 19, павильон П-8, Минск, Беларусь</span>
+            </address>
+            <div class="cs-contact-info__row" title="Телефон">
+                <div class="js-ga-phone-hover">
+                    <span class="cs-contact-info__phone-item">+375 (29) 640-50-84</span>
+                </div>
+                <div class="js-ga-phone-hover">
+                    <span class="cs-contact-info__phone-item">+375 (33) 344-50-84</span>
+                </div>
+            </div>
+            <span class="cs-contact-info__row" title="Viber">+375 (29) 640-50-84</span>
+        </div>
+    </div>
+</section>
+
+<section class="cs-page__row">
+    <div class="cs-title">
+        <span class="cs-title__page-content">Местоположение компании</span>
+    </div>
+    <div class="cs-dynamic-map">
+        <div data-bazooka="GoogleMapsEmbed" data-qaid="google_map" class="cs-dynamic-map__map" data-bazid="4">
+            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBY4n5MgqA_AaRypsjq6K3cDFCqfcUzKps&amp;q=53.95416,27.692509&amp;language=ru" width="100%" height="100%" loading="lazy"></iframe>
+        </div>
+        <i class="cs-dynamic-map__spinner"></i>
+    </div>
+</section>
+
+{% endblock %}

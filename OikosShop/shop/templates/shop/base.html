@@ -12,11 +12,20 @@
 <div id="header">
     <a href="/" class="logo">Oikos</a>
 </div>
-<div id="subheader">
+<nav>
+    <ul class='main_menu'>
+        <li><a href="/" class={% if category.slug == c.slug %}class="selected"{% endif %}>Каталог</a></li>
+        <li><a href="/about" class="main_menu-item">О нас</a></li>
+        <li><a href="/delivery" class="main_menu-item">Доставка и отплата</a></li>
+    </ul>
+</nav>
+
+{% comment %} <div id="subheader">
     <div class="cart">
         Ваша корзина пустая.
     </div>
-</div>
+</div> {% endcomment %}
+
 <div id="content">
     {% block content %}
     {% endblock %}
