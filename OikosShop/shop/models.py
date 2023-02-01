@@ -29,7 +29,7 @@ class Product(models.Model):
     available = models.BooleanField(default=True, verbose_name=_('Доступность'))
     created = models.DateTimeField(auto_now_add=True, verbose_name=_('Создан'))
     updated = models.DateTimeField(auto_now=True, verbose_name=_('Изменен'))
-    usedin = models.ManyToManyField("shop.Product", verbose_name=_("Используется в"))
+    usedin = models.ManyToManyField("shop.Product", blank=True, verbose_name=_("Используется в"))
     
     class Meta:
         ordering = ('name',)
