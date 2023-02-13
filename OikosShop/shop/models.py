@@ -20,19 +20,20 @@ class Category(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey(Category, related_name='products', on_delete=models.SET_NULL, null=True, verbose_name=_('Категория'))
+    order = models.DecimalField(default=0, max_digits=3, decimal_places=0, verbose_name=_('Порядок'))
     name = models.CharField(max_length=200, db_index=True, verbose_name=_('Наименование'))
     slug = models.SlugField(max_length=200, db_index=True)
     image = models.ImageField(upload_to='products/%Y/%m/%d', blank=True, verbose_name=_('Изображение'))
     description = models.TextField(blank=True, verbose_name=_('Описание'))
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name=_('Цена'))
-    stock = models.PositiveIntegerField(verbose_name=_('Остаток'))
+    stock = models.PositiveIntegerField(default=0, blank=True, verbose_name=_('Остаток'))
     available = models.BooleanField(default=True, verbose_name=_('Доступность'))
     created = models.DateTimeField(auto_now_add=True, verbose_name=_('Создан'))
     updated = models.DateTimeField(auto_now=True, verbose_name=_('Изменен'))
     usedin = models.ManyToManyField("shop.Product", blank=True, verbose_name=_("Используется в"))
     
     class Meta:
-        ordering = ('name',)
+        ordering = ('order',)
         verbose_name = _('Товар')
         verbose_name_plural = _('Товары')
         index_together = (('id', 'slug'),)
